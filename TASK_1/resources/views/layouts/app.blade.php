@@ -8,8 +8,9 @@
         <a class="btn btn-primary" href="/ourTeams">Our Teams</a>
         <a class="btn btn-primary" href="/aboutUs">About us</a>
         <a class="btn btn-primary" href="/contact">Contact</a>
-        
-        <h2>Contact us page</h2>
     </body>
     
+    <div>
+        @yield('content')
+    </div>
 </html>
