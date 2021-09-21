@@ -18,3 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/contact', [PagesController::class, 'contact']);
+Route::get('/aboutUs', [PagesController::class, 'aboutUs']);
+Route::get('/ourTeams', [PagesController::class, 'ourTeams']);
