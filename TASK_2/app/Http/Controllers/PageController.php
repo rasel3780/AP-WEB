@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Student;
+
 use Session;
 use App\Models\User;
 use Hash;
@@ -29,7 +31,16 @@ class PageController extends Controller
       
     public function registerButton(Request $request)
     {  
-        return "ok";
+        $var = new Student();
+        $var->name= $request->name;
+        $var->s_id = $request->s_id;
+        $var->password = $request->password;
+        $var->email = $request->email;
+        $var->dob = $request->dob;
+        $var->save();
+
+
+        return "OK";
     }
     
     public function contact(){

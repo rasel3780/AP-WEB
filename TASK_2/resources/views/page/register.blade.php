@@ -13,9 +13,16 @@
             @enderror
         </div>
         <div class="col-md-4 form-group">
-            <span>Id</span>
-            <input type="text" name="id" value="{{old('id')}}"class="form-control">
-            @error('id')
+            <span>Student Id</span>
+            <input type="text" name="s_id" value="{{old('s_id')}}"class="form-control">
+            @error('s_id')
+                <span class="text-danger">{{$message}}</span>
+            @enderror
+        </div>
+        <div class="col-md-4 form-group">
+            <span>Password</span>
+            <input type="text" name="password" value="{{old('password')}}" class="form-control">
+            @error('password')
                 <span class="text-danger">{{$message}}</span>
             @enderror
         </div>
@@ -27,13 +34,7 @@
             <span>Email</span>
             <input type="text" name="email" value="{{old('email')}}" class="form-control">
         </div>
-        <div class="col-md-4 form-group">
-            <span>Phone</span>
-            <input type="text" name="phone" value="{{old('phone')}}" class="form-control">
-            @error('phone')
-                <span class="text-danger">{{$message}}</span>
-            @enderror
-        </div>
+        
         <input type="submit" class="btn btn-success" value="Add" >
     </form>
 @endsection
