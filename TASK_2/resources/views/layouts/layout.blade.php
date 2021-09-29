@@ -4,7 +4,9 @@
 
     </head>
     <body>
-        @include('include.topNavBar')
+    <a class="btn btn-primary" href="{{route('login')}}">Login</a>
+    <a class="btn btn-success" href="{{route('register')}}">Register</a>
+    <a class="btn btn-danger" href="{{route('contact')}}"> Contact </a>
         <div>
             @yield('content')
         </div>
