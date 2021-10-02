@@ -21,3 +21,4 @@ Route::post('submit-login', [PageController::class, 'loginButton'])->name('login
 Route::get('registration', [PageController::class, 'registrationPage'])->name('register');
 Route::post('submit-registration', [PageController::class, 'registerButton'])->name('register.post'); 
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
+
