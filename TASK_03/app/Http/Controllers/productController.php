@@ -27,7 +27,7 @@ class productController extends Controller
         $var->quantity = $request->quantity;
         $var->description = $request->description;
         $var->save();
-        return "OK";      
+        return redirect()->route('product.list');      
     }
     public function list(){
         
@@ -35,22 +35,23 @@ class productController extends Controller
         return view('products.list')->with('products',$products);
     }
     public function edit(Request $request){
-        //
         $id = $request->id;
-   
         $product = Product::where('id',$id)->first();
- 
         return view('products.edit')->with('product',$product);
-
     }
+
     public function editSubmit(Request $request){
         $var = Product::where('id',$request->id)->first();
         $var->name= $request->name;
         $var->price = $request->price;
         $var->quantity = $request->quantity;
+        $var->description = $request->description;
         $var->save();
         return redirect()->route('product.list');
-
     }
-   
+    public function delete(Request $request){
+        $id = $request->id;
+        $product = Product::where('id',$id)->delete();
+        return redirect()->route('product.list');
+    }
 }

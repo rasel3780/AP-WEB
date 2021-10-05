@@ -2,7 +2,6 @@
 @extends('layouts.app')
 @section('content')
 <form action="{{route('product.edit')}}" class="col-md-6" method="post">
-    =
         {{csrf_field()}}
         <input type="hidden" name="id" value="{{$product->id}}">
         <div class="col-md-4 form-group">
@@ -13,7 +12,7 @@
             @enderror
         </div>
         <div class="col-md-4 form-group">
-            <span>Id</span>
+            <span>Price</span>
             <input type="text" name="price" value="{{$product->price}}"class="form-control">
             @error('price')
                 <span class="text-danger">{{$message}}</span>
@@ -27,6 +26,6 @@
             <span>Description</span>
             <input type="text" name="description" value="{{$product->description}}" class="form-control">
         </div>
-        <input type="submit" class="btn btn-success" value="Edit" >
+        <input type="submit" class="btn btn-success" value="Update" >
     </form>
 @endsection

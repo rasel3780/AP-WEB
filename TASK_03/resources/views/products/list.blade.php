@@ -14,7 +14,8 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->quantity}}</td>
                 <td>{{$product->description}}</td>
-                <td><a href="/product/edit/{{$product->id}}/{{$product->name}}">Edit</a></td>
+                <td><a href="/product/edit/{{$product->id}}/{{$product->name}}">Update</a></td>
+                <td><a href="/product/delete/{{$product->id}}/{{$product->name}}">Delete</a></td>
             </tr>
         @endforeach
     </table>
