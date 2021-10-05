@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class productController extends Controller
 {
@@ -24,13 +25,14 @@ class productController extends Controller
         $var->name= $request->name;
         $var->price = $request->price;
         $var->quantity = $request->quantity;
+        $var->description = $request->description;
         $var->save();
         return "OK";      
     }
     public function list(){
         
         $product = Product::all();
-        return view('pages.products.list')->with('product',$product);
+        return view('products.list')->with('product',$product);
     }
     public function edit(Request $request){
         //
@@ -38,7 +40,7 @@ class productController extends Controller
    
         $product = Product::where('id',$id)->first();
  
-        return view('pages.products.edit')->with('product',$product);
+        return view('products.edit')->with('product',$product);
 
     }
     public function editSubmit(Request $request){
