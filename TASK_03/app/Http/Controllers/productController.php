@@ -31,8 +31,8 @@ class productController extends Controller
     }
     public function list(){
         
-        $product = Product::all();
-        return view('products.list')->with('product',$product);
+        $products = Product::all();
+        return view('products.list')->with('products',$products);
     }
     public function edit(Request $request){
         //

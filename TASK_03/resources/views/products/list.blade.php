@@ -8,7 +8,7 @@
             <th>Description</th>
             <th></th>
         </tr>
-        @foreach($Products as $product)
+        @foreach($products as $product)
             <tr>
                 <td>{{$product->name}}</td>
                 <td>{{$product->price}}</td>
