@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/product/create',[productController::class,'create'])->name('product.create');
+Route::get('/product/create',[productController::class,'Create'])->name('product.create');
 Route::post('/product/create',[productController::class,'createSubmit'])->name('product.create');
 Route::get('/product/edit/{id}/{name}',[productController::class,'edit']);
 Route::post('/product/edit',[productController::class,'editSubmit'])->name('product.edit');

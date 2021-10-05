@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class productController extends Controller
 {
     public function Create(){
-        return view('pages.products.create');
+        return view('products.create');
     }
     public function createSubmit(Request $request){
      
@@ -30,7 +30,7 @@ class productController extends Controller
     public function list(){
         
         $product = Product::all();
-        return view('pages.product.list')->with('product',$product);
+        return view('pages.products.list')->with('product',$product);
     }
     public function edit(Request $request){
         //
@@ -38,7 +38,7 @@ class productController extends Controller
    
         $product = Product::where('id',$id)->first();
  
-        return view('pages.product.edit')->with('product',$product);
+        return view('pages.products.edit')->with('product',$product);
 
     }
     public function editSubmit(Request $request){
