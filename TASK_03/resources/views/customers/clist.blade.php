@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cus')
 @section('content')
 
     <table class="table table-borded">
@@ -15,8 +15,7 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->quantity}}</td>
                 <td>{{$product->description}}</td>
-                <td><a href="/product/edit/{{$product->id}}/{{$product->name}}">Update</a></td>
-                <td><a href="/product/delete/{{$product->id}}/{{$product->name}}">Delete</a></td>
+                <td><a href=>Add to cart</a></td>
             </tr>
         @endforeach
     </table>

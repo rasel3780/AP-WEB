@@ -28,3 +28,5 @@ Route::get('/product/delete/{id}/{name}',[productController::class,'delete']);
 //Customer routes
 Route::get('/customer/login',[customersController::class,'Login'])->name('customer.login');
 Route::post('/customer/login',[customersController::class,'loginSubmit'])->name('customer.login');
+Route::get('/customer/validate',[customersController::class,'loginSubmit'])->name('customer.validate');
+Route::get('/customer/plist',[customersController::class,'plist'])->name('customer.plist');
